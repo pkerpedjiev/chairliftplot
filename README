@@ -1,0 +1,14 @@
+1. Export area from OSM.
+2. Compile osmfilter
+
+cd scripts/
+cc osmfilter.c -lz -o osmfilter
+
+3. Filter out aerialways
+
+./scripts/osmfilter --keep="aerialway=" raw_osm/stuhleck.osm > filtered_osm/stuhleck.osm
+
+4. Add elevation:
+
+python scripts/augment_nodes.py filtered_osm/stuhleck.osm > with_elevation/stuhleck.osm
+
