@@ -29,9 +29,26 @@ text {
   font: 18px sans-serif;
 }
 
-.x.axis path {
-  display: none;
-}
+body {
+      font: 10px sans-serif;
+  }
+
+  .axis path,
+  .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+  }
+
+  .x.axis path {
+      display: none;
+  }
+
+  .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 1.5px;
+  }
 
 </style>
 <body>
@@ -39,3 +56,4 @@ text {
     <script src="jquery-1.11.2.min.js"></script>
 <script src="d3.js"></script>
 <script src="plot.js"> </script>
+<div id="chart"></div>
