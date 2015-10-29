@@ -1,4 +1,5 @@
 import json
+import uuid
 from mpl_toolkits.basemap import Basemap
 
 from shapely.ops import transform
@@ -167,11 +168,13 @@ def main():
                         "geometry": mapping(polygon),
                         "properties": {
                             "name": "",
-                            "area": area / 1000000.
+                            "area": area / 1000000.,
+                            "uid": str(uuid.uuid4())
                             }
                         } ]
         #print >>sys.stderr, "polygon:", polygon
         print >>sys.stderr, "projected_polygon:", area / 1000000
+    features.sort(key=lambda x: -x['properties']['area']);
 
     output_json = {"type":"FeatureCollection",
                     "features": features
@@ -180,7 +183,7 @@ def main():
     #print >>sys.stderr, "concave_hull:", concave_hull
 
     #print json.dumps(mapping(concave_hull))
-    print json.dumps(output_json)
+    print json.dumps(output_json,indent=2)
 
 if __name__ == '__main__':
     main()
