@@ -6,9 +6,20 @@ cc osmfilter.c -lz -o osmfilter
 
 3. Filter out aerialways
 
-./scripts/osmfilter --keep="aerialway=" raw_osm/stuhleck.osm > filtered_osm/stuhleck.osm
+name=austria-latest; ./scripts/osmfilter --keep="aerialway=" raw_osm/${name}.osm > filtered_osm/${name}.osm
+name=switzerland-latest; ./scripts/osmfilter --keep="piste:type=downhill or aerialway="  raw_osm/${name}.osm > filtered_osm/${name}.osm
+name=whistler; ./scripts/osmfilter --keep="piste:type=downhill or aerialway=" --drop="piste:grooming=backcountry"  raw_osm/${name}.osm > filtered_osm/${name}.osm
 
 4. Add elevation:
 
 python scripts/augment_nodes.py filtered_osm/stuhleck.osm > with_elevation/stuhleck.osm
 
+* Cluster by distance:
+
+name=austria-latest; python scripts/concave_hull.py filtered_osm/${name}.osm -d 2 > jsons/${name}.json
+
+* Convert to topojson
+
+name=whistler; topojson -q 100000 -o jsons/${name}.topo boundaries=jsons/${name}.json; lt jsons/
+
+Notes:

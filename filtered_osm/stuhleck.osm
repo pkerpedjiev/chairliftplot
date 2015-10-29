@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <osm version="0.6" generator="osmfilter 1.3A">
-	<bounds minlat="47.55" minlon="15.6878" maxlat="47.6337" maxlon="15.8322"/>
+	<bounds minlat="47.5642" minlon="15.7332" maxlat="47.6173" maxlon="15.8001"/>
 	<node id="318145077" lat="47.6147744" lon="15.757654" version="4" timestamp="2013-02-03T18:03:53Z" changeset="14899954" uid="54806" user="_al">
 		<tag k="aerialway" v="station"/>
 	</node>
@@ -12,9 +12,6 @@
 	<node id="318145085" lat="47.5703839" lon="15.7713066" version="4" timestamp="2010-11-07T10:51:07Z" changeset="6309971" uid="289334" user="Soldier Boy">
 		<tag k="aerialway" v="station"/>
 		<tag k="ele" v="1355"/>
-	</node>
-	<node id="308473261" lat="47.6315205" lon="15.8304299" version="21" timestamp="2010-11-07T13:24:49Z" changeset="6311259" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="station"/>
 	</node>
 	<node id="318155502" lat="47.5912504" lon="15.7642208" version="4" timestamp="2010-12-30T23:52:54Z" changeset="6815433" uid="289334" user="Soldier Boy">
 		<tag k="aerialway" v="station"/>
@@ -31,29 +28,16 @@
 	<node id="318150434" lat="47.5919903" lon="15.7645784" version="8" timestamp="2010-12-30T23:52:55Z" changeset="6815433" uid="289334" user="Soldier Boy">
 		<tag k="aerialway" v="station"/>
 	</node>
-	<node id="308473262" lat="47.622739" lon="15.8339663" version="4" timestamp="2011-09-21T11:53:35Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="station"/>
-	</node>
 	<node id="318145083" lat="47.6084785" lon="15.7594192" version="6" timestamp="2011-10-30T13:48:05Z" changeset="9693802" uid="289334" user="Soldier Boy">
 		<tag k="aerialway" v="station"/>
 	</node>
 	<node id="322118333" lat="47.6000052" lon="15.7579864" version="12" timestamp="2013-10-15T09:08:12Z" changeset="18364490" uid="1769243" user="FF-Spital"/>
 	<node id="334942254" lat="47.6154681" lon="15.792518" version="2" timestamp="2012-08-23T08:34:13Z" changeset="12829785" uid="45347" user="eriosw"/>
-	<node id="334942241" lat="47.6174505" lon="15.7905697" version="2" timestamp="2012-08-23T08:34:13Z" changeset="12829785" uid="45347" user="eriosw"/>
-	<node id="334942243" lat="47.6188475" lon="15.7928169" version="2" timestamp="2012-08-23T08:34:13Z" changeset="12829785" uid="45347" user="eriosw"/>
 	<node id="334942252" lat="47.613589" lon="15.7902036" version="2" timestamp="2012-08-23T08:34:13Z" changeset="12829785" uid="45347" user="eriosw"/>
 	<node id="334942246" lat="47.6165946" lon="15.7906242" version="3" timestamp="2012-08-23T08:34:13Z" changeset="12829785" uid="45347" user="eriosw"/>
 	<node id="334942248" lat="47.6177977" lon="15.7946149" version="2" timestamp="2012-06-24T17:20:51Z" changeset="12002197" uid="474183" user="ratrun"/>
-	<node id="334948113" lat="47.6003093" lon="15.6851598" version="2" timestamp="2009-10-04T09:30:30Z" changeset="2732939" uid="139154" user="horst_w"/>
-	<node id="334948117" lat="47.6008743" lon="15.6909472" version="2" timestamp="2009-10-04T09:30:30Z" changeset="2732939" uid="139154" user="horst_w"/>
-	<node id="344931692" lat="47.6227743" lon="15.833" version="4" timestamp="2011-09-21T11:53:36Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="station"/>
-	</node>
 	<node id="670728607" lat="47.609761" lon="15.7545235" version="2" timestamp="2010-11-07T10:50:55Z" changeset="6309971" uid="289334" user="Soldier Boy"/>
 	<node id="670728523" lat="47.6063342" lon="15.7532259" version="2" timestamp="2010-11-07T10:50:56Z" changeset="6309971" uid="289334" user="Soldier Boy"/>
-	<node id="344931691" lat="47.6297978" lon="15.8256495" version="5" timestamp="2011-09-21T11:53:36Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="station"/>
-	</node>
 	<node id="968850831" lat="47.6129729" lon="15.7581591" version="2" timestamp="2011-10-30T13:48:06Z" changeset="9693802" uid="289334" user="Soldier Boy">
 		<tag k="aerialway" v="pylon"/>
 	</node>
@@ -64,79 +48,6 @@
 	<node id="980335727" lat="47.5999723" lon="15.7580921" version="2" timestamp="2013-10-15T09:08:12Z" changeset="18364490" uid="1769243" user="FF-Spital"/>
 	<node id="980335683" lat="47.602103" lon="15.7609647" version="2" timestamp="2013-10-15T09:08:12Z" changeset="18364490" uid="1769243" user="FF-Spital"/>
 	<node id="980335689" lat="47.6072347" lon="15.7631293" version="2" timestamp="2013-10-15T09:08:12Z" changeset="18364490" uid="1769243" user="FF-Spital"/>
-	<node id="1153066552" lat="47.6349901" lon="15.8264379" version="2" timestamp="2011-09-21T11:53:34Z" changeset="9359778" uid="289334" user="Soldier Boy"/>
-	<node id="1153066559" lat="47.6329522" lon="15.827772" version="2" timestamp="2011-09-21T11:53:34Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="station"/>
-	</node>
-	<node id="1439233959" lat="47.6232199" lon="15.8337726" version="1" timestamp="2011-09-21T11:53:20Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233960" lat="47.6233483" lon="15.8323993" version="1" timestamp="2011-09-21T11:53:20Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233961" lat="47.6236682" lon="15.8335921" version="1" timestamp="2011-09-21T11:53:20Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233962" lat="47.6237062" lon="15.8320247" version="1" timestamp="2011-09-21T11:53:20Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233963" lat="47.6246144" lon="15.8332111" version="1" timestamp="2011-09-21T11:53:20Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233966" lat="47.624844" lon="15.8308341" version="1" timestamp="2011-09-21T11:53:20Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233973" lat="47.6256974" lon="15.829941" version="1" timestamp="2011-09-21T11:53:20Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233974" lat="47.6258265" lon="15.832723" version="1" timestamp="2011-09-21T11:53:20Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233976" lat="47.6262136" lon="15.8325671" version="1" timestamp="2011-09-21T11:53:20Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233978" lat="47.6267059" lon="15.8288854" version="1" timestamp="2011-09-21T11:53:20Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233983" lat="47.6275231" lon="15.8280303" version="1" timestamp="2011-09-21T11:53:21Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233989" lat="47.6281618" lon="15.8317826" version="1" timestamp="2011-09-21T11:53:21Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233991" lat="47.6282381" lon="15.8272819" version="1" timestamp="2011-09-21T11:53:21Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233993" lat="47.6288938" lon="15.8314877" version="1" timestamp="2011-09-21T11:53:21Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233997" lat="47.6292244" lon="15.8262497" version="1" timestamp="2011-09-21T11:53:21Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439233999" lat="47.6295676" lon="15.8312164" version="1" timestamp="2011-09-21T11:53:21Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439234001" lat="47.6296397" lon="15.825815" version="1" timestamp="2011-09-21T11:53:21Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439234004" lat="47.630821" lon="15.8307116" version="1" timestamp="2011-09-21T11:53:21Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439234005" lat="47.6311264" lon="15.8305886" version="1" timestamp="2011-09-21T11:53:21Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439234012" lat="47.6334358" lon="15.8274554" version="1" timestamp="2011-09-21T11:53:21Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439234014" lat="47.6340382" lon="15.827061" version="1" timestamp="2011-09-21T11:53:21Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439234018" lat="47.6346309" lon="15.826673" version="1" timestamp="2011-09-21T11:53:21Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="pylon"/>
-	</node>
-	<node id="1439234019" lat="47.6346813" lon="15.82664" version="1" timestamp="2011-09-21T11:53:22Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<tag k="aerialway" v="station"/>
-	</node>
 	<node id="1485686473" lat="47.6089486" lon="15.7592874" version="1" timestamp="2011-10-30T13:47:52Z" changeset="9693802" uid="289334" user="Soldier Boy">
 		<tag k="aerialway" v="pylon"/>
 	</node>
@@ -260,22 +171,6 @@
 	<node id="3301199528" lat="47.6066197" lon="15.7628699" version="1" timestamp="2015-01-20T19:25:13Z" changeset="28291819" uid="842295" user="Quis">
 		<tag k="aerialway" v="pylon"/>
 	</node>
-	<way id="28087925" version="5" timestamp="2011-09-21T11:53:33Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<nd ref="308473261"/>
-		<nd ref="1439234005"/>
-		<nd ref="1439234004"/>
-		<nd ref="1439233999"/>
-		<nd ref="1439233993"/>
-		<nd ref="1439233989"/>
-		<nd ref="1439233976"/>
-		<nd ref="1439233974"/>
-		<nd ref="1439233963"/>
-		<nd ref="1439233961"/>
-		<nd ref="1439233959"/>
-		<nd ref="308473262"/>
-		<tag k="aerialway" v="gondola"/>
-		<tag k="name" v="Zau[:ber:]g Kabinenbahn"/>
-	</way>
 	<way id="28939202" version="8" timestamp="2012-07-25T14:11:23Z" changeset="12487529" uid="373869" user="Alepom">
 		<nd ref="318145085"/>
 		<nd ref="1837698494"/>
@@ -308,13 +203,6 @@
 		<tag k="aerialway:occupancy" v="2"/>
 		<tag k="name" v="Schieferwiese II"/>
 	</way>
-	<way id="30363454" version="8" timestamp="2012-08-23T08:34:04Z" changeset="12829785" uid="45347" user="eriosw">
-		<nd ref="334942241"/>
-		<nd ref="334942243"/>
-		<tag k="aerialway" v="t-bar"/>
-		<tag k="is_in" v="Spital am Semmering,Bruck-Mürzzuschlag,Steiermark,Österreich,Europe"/>
-		<tag k="source" v="plan.at 2009"/>
-	</way>
 	<way id="30363455" version="6" timestamp="2012-08-23T08:34:04Z" changeset="12829785" uid="45347" user="eriosw">
 		<nd ref="334942246"/>
 		<nd ref="334942248"/>
@@ -328,22 +216,6 @@
 		<tag k="aerialway" v="t-bar"/>
 		<tag k="is_in" v="Spital am Semmering,Bruck-Mürzzuschlag,Steiermark,Österreich,Europe"/>
 		<tag k="source" v="plan.at 2009"/>
-	</way>
-	<way id="31022249" version="4" timestamp="2011-09-21T11:53:33Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<nd ref="344931691"/>
-		<nd ref="1439234001"/>
-		<nd ref="1439233997"/>
-		<nd ref="1439233991"/>
-		<nd ref="1439233983"/>
-		<nd ref="1439233978"/>
-		<nd ref="1439233973"/>
-		<nd ref="1439233966"/>
-		<nd ref="1439233962"/>
-		<nd ref="1439233960"/>
-		<nd ref="344931692"/>
-		<tag k="aerialway" v="chair_lift"/>
-		<tag k="aerialway:occupancy" v="4"/>
-		<tag k="name" v="4-er Sportbahn Blauer Blitz"/>
 	</way>
 	<way id="28939200" version="10" timestamp="2011-10-30T13:47:58Z" changeset="9693802" uid="289334" user="Soldier Boy">
 		<nd ref="318145077"/>
@@ -412,22 +284,6 @@
 		<tag k="aerialway" v="drag_lift"/>
 		<tag k="aerialway:occupancy" v="2"/>
 		<tag k="name" v="Sonnenlift"/>
-	</way>
-	<way id="30363805" version="5" timestamp="2011-07-28T16:23:22Z" changeset="8856061" uid="491845" user="data_at">
-		<nd ref="334948113"/>
-		<nd ref="334948117"/>
-		<tag k="aerialway" v="drag_lift"/>
-		<tag k="source" v="plan.at 2009"/>
-	</way>
-	<way id="99743235" version="2" timestamp="2011-09-21T11:53:26Z" changeset="9359778" uid="289334" user="Soldier Boy">
-		<nd ref="1153066559"/>
-		<nd ref="1439234012"/>
-		<nd ref="1439234014"/>
-		<nd ref="1439234018"/>
-		<nd ref="1439234019"/>
-		<nd ref="1153066552"/>
-		<tag k="aerialway" v="drag_lift"/>
-		<tag k="name" v="Happy-lift"/>
 	</way>
 	<way id="241722562" version="2" timestamp="2013-10-15T09:08:17Z" changeset="18364490" uid="1769243" user="FF-Spital">
 		<nd ref="2493149794"/>
