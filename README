@@ -23,3 +23,6 @@ name=austria-latest; python scripts/concave_hull.py filtered_osm/${name}.osm -d 
 name=whistler; topojson -q 100000 -o jsons/${name}.topo boundaries=jsons/${name}.json; lt jsons/
 
 Notes:
+
+./scripts/finish.sh europe-latest
+./scripts/finish.sh north-america-latest
