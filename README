@@ -26,3 +26,7 @@ Notes:
 
 ./scripts/finish.sh europe-latest
 ./scripts/finish.sh north-america-latest
+
+## Combine Two Different Jsons ##
+
+python scripts/combine_geojsons.py jsons/europe-latest.json jsons/north-america-latest.json > jsons/europe-north-america.json
