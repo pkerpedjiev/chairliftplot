@@ -7,6 +7,81 @@ from optparse import OptionParser
 
 import xml.etree.ElementTree as ET
 
+def proximity_cluster(points, distance,dist):
+    #cluster points such that whenever two points are
+    #within distance of each other, they are placed in
+    #the same cluster
+
+    #take m n-d points as input and
+    #return an array of length m containing integers
+    #where each integers encodes the cluster that the ith
+    #point is in
+   # 
+    # dist is a function that computes the distance between
+    # any two points
+
+    print >>sys.stderr, "distance:", distance
+
+    clusters = []
+    links = []
+    linksDict = {}
+    
+    # all points are in their own cluster
+    for i in range(len(points)):
+        clusters.append(i);
+        linksDict[i] = [];
+
+    # sort the points by x values
+    points.sort(key=lambda x: x[0])
+
+    for i in range(len(points)):
+        if i % 100 == 0:
+            print "\r{} of {}".format(i, len(points))
+
+        for j in range(i+1, len(points)):
+            d1 = dist([points[j][0], points[j][1]],[points[i][0],points[j][1]])
+            if d1 > distance:
+                break;  # gone too far
+
+            d = dist(points[i], points[j])
+            if (dist(points[i], points[j]) < distance):
+                # the two points are close enough to be linked
+                links.append([i,j])
+                linksDict[i].append(j)
+                linksDict[j].append(i)
+
+    visited = set()
+
+    queue = []
+    # traverse the list of links and assign clusters
+    def bfs():
+        to_visit = set()
+        while len(queue) > 0:
+            currNode, prevNode = queue.pop(0)
+            if currNode in visited:
+                continue
+            
+            visited.add(currNode);
+            clusters[currNode] = min(clusters[currNode], clusters[prevNode]);
+
+            for i in range(len(linksDict[currNode])):
+                if linksDict[currNode][i] in visited or linksDict[currNode][i] in to_visit:
+                    continue;
+
+                to_visit.add(linksDict[currNode][i])
+                queue.append((linksDict[currNode][i], currNode))
+
+    # go through every point and traverse its list of links
+    # assigning clusters
+    for i in range(len(points)):
+        if i in visited:
+            continue;
+
+        queue = [(i,i)]
+        bfs()
+
+    return {"clusters": clusters, "links": links};
+
 def extract_points(tree, distance=1):
     '''
     Get a list of points to use for clustering from the osm
@@ -45,6 +120,10 @@ def extract_points(tree, distance=1):
 
     return points
 
+def distanceBetweenNodes(node1, node2):
+    dist = haversine(node1, node2)
+    return dist
+
 def main():
     usage = """
     python cluster_by_distances.py file.osm
@@ -63,6 +142,8 @@ def main():
 
     tree = ET.parse(args[0])
     points = extract_points(tree, options.distance)
+    ret = proximity_cluster(points, options.distance, distanceBetweenNodes)
+    print "ret[clusters]", ret["clusters"]
 
 if __name__ == '__main__':
     
