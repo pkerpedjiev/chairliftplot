@@ -4,7 +4,6 @@ from mpl_toolkits.basemap import Basemap
 
 from shapely.ops import transform
 from haversine import haversine
-import xml.etree.ElementTree as ET
 import shapely.geometry as geometry
 from shapely.geometry import Point, Polygon, MultiPolygon
 from shapely.geometry import mapping
@@ -112,7 +111,7 @@ from optparse import OptionParser
 
 def main():
     usage = """
-    python concave_hull filtered_osm.osm
+    python concave_hull sampled_osm.ssv
     """
     num_args= 1
     parser = OptionParser(usage=usage)
@@ -126,32 +125,8 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    tree = ET.parse(args[0])
-    root = tree.getroot()
     points = []
-
-    nodes = {}
-    for node in tree.iter('node'):
-        points += [[float(node.attrib['lat']), float(node.attrib['lon'])]]
-        nodes[node.attrib['id']] = points[-1]
-    for way in tree.iter('way'):
-        nds = list(way.iter('nd'))
-        for i in range(len(nds)-1):
-            node_start = nodes[nds[i].attrib['ref']]
-            node_end = nodes[nds[i+1].attrib['ref']]
-
-            vec_length = haversine(node_start, node_end)
-            #print >>sys.stderr, "vec_length:", vec_length
-            vec_length_parts = int(2 + (1+ vec_length / options.distance))
-
-            lats = np.linspace(node_start[0], node_end[0], vec_length_parts)
-            lons = np.linspace(node_start[1], node_end[1], vec_length_parts) 
-
-            #print >>sys.stderr, "len(lats)", len(lats), len(lons)
-            #print >>sys.stderr, "zip", zip(lats, lons)
-
-            #print >>sys.stderr, "points:", zip(lats, lons)
-            points += zip(lats, lons)
+    points = np.genfromtxt(args[0], delimiter=' ')
 
     #print >>sys.stderr, "point:", points
     points = [geometry.shape(Point(point[0], point[1]))

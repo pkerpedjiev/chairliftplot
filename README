@@ -10,13 +10,19 @@ name=austria-latest; ./scripts/osmfilter --keep="aerialway=" raw_osm/${name}.osm
 name=switzerland-latest; ./scripts/osmfilter --keep="piste:type=downhill or aerialway="  raw_osm/${name}.osm > filtered_osm/${name}.osm
 name=whistler; ./scripts/osmfilter --keep="piste:type=downhill or aerialway=" --drop="piste:grooming=backcountry"  raw_osm/${name}.osm > filtered_osm/${name}.osm
 
+name=london; /usr/bin/time ./scripts/osmfilter raw_osm/${name}.osm --keep= --keep-ways=building= --drop-relations -o=filtered_osm/${name}.osm
+
 4. Add elevation:
 
 python scripts/augment_nodes.py filtered_osm/stuhleck.osm > with_elevation/stuhleck.osm
 
+* Sample subset of nodes
+
+name=vienna_small; python scripts/sample_osm_nodes.py filtered_osm/${name}.osm > sampled_osm/${name}.ssv
+
 * Cluster by distance:
 
-name=austria-latest; python scripts/concave_hull.py filtered_osm/${name}.osm -d 2 > jsons/${name}.json
+name=austria-latest; python scripts/concave_hull.py sampled_osm/${name}.ssv -d 2 > jsons/${name}.json
 
 * Convert to topojson
 
@@ -30,3 +36,7 @@ Notes:
 ## Combine Two Different Jsons ##
 
 python scripts/combine_geojsons.py jsons/europe-latest.json jsons/north-america-latest.json > jsons/europe-north-america.json
+
+## Cities ##
+
+name=vienna_small; python scripts/sample_osm_nodes.py filtered_osm/${name}.osm > sampled_osm/${name}.osm

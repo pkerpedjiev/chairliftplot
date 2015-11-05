@@ -23,7 +23,10 @@ def main():
     counter = 0
     for event, elem in ET.iterparse(args[0], events=('start', 'end')):
         if event == 'start' and elem.tag == 'node':
-            print elem.attrib['lat'], elem.attrib['lon']
+            counter += 1
+
+            if counter % options.n == 0:
+                print elem.attrib['lat'], elem.attrib['lon']
 
 if __name__ == '__main__':
     main()
