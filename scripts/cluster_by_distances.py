@@ -1,7 +1,12 @@
 #!/usr/bin/python
 
+from mpl_toolkits.basemap import Basemap
+
+import Bio.KDTree as kd
 import numpy as np
+import scipy.spatial as ss
 import sys
+import time
 from haversine import haversine
 from optparse import OptionParser
 
@@ -25,12 +30,48 @@ def proximity_cluster(points, distance,dist):
     clusters = []
     links = []
     linksDict = {}
+
     
+    center = np.array([0., 0.])
     # all points are in their own cluster
     for i in range(len(points)):
         clusters.append(i);
         linksDict[i] = [];
+        center += np.array(points[i])
 
+    # find a center for the equal area projection
+    center /= float(len(points))
+    m = Basemap(width=1,height=1, resolution='l',projection='laea',lat_ts=center[0],lat_0=center[0],lon_0=center[1])
+
+    # project all the points
+    projected_points = []
+    for point in points:
+        projected_points += [m(point[1], point[0])]
+
+    projected_points = np.array(projected_points)
+    print "projected_points.shape:", np.array(projected_points).shape
+    kd_tree = kd.KDTree(2)
+    kd_tree.set_coords(projected_points)
+
+    t1 = time.time()
+    for i,point in enumerate(projected_points):
+        if i % 100 == 0:
+            t2 = time.time()
+            sys.stdout.write('\r{} of {}, time: {}'.format(i, len(projected_points), (len(projected_points)-i) * (t2 - t1) / (60 * 60 * i+1) ))
+            sys.stdout.flush()
+        neighbors = kd_tree.search(point, 100)
+        neighbors = kd_tree.get_indices()
+
+        for j in neighbors:
+            if i == j:
+                continue
+            #print "h", i,j,points[i], points[j], haversine(points[i], points[j])
+            links.append([i,j])
+            linksDict[i].append(j)
+            linksDict[j].append(i)
+
+
+    '''
     # sort the points by x values
     points.sort(key=lambda x: x[0])
 
@@ -49,6 +90,7 @@ def proximity_cluster(points, distance,dist):
                 links.append([i,j])
                 linksDict[i].append(j)
                 linksDict[j].append(i)
+    '''
 
     visited = set()
 
