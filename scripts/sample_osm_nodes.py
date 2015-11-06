@@ -20,13 +20,25 @@ def main():
         parser.print_help()
         sys.exit(1)
 
+    # get an iterable
+    context = ET.iterparse(args[0], events=("start", "end"))
+
+    # turn it into an iterator
+    context = iter(context)
+
+    # get the root element
+    event, root = context.next()
+
     counter = 0
-    for event, elem in ET.iterparse(args[0], events=('start', 'end')):
-        if event == 'start' and elem.tag == 'node':
+    for event, elem in context:
+        if event == 'end' and elem.tag == 'node':
             counter += 1
 
             if counter % options.n == 0:
-                print elem.attrib['lat'], elem.attrib['lon']
+                if 'lat' in elem.attrib and 'lon' in elem.attrib:
+                    print elem.attrib['lat'], elem.attrib['lon']
+            elem.clear()
+            root.clear()
 
 if __name__ == '__main__':
     main()

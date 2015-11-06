@@ -11,6 +11,7 @@ name=switzerland-latest; ./scripts/osmfilter --keep="piste:type=downhill or aeri
 name=whistler; ./scripts/osmfilter --keep="piste:type=downhill or aerialway=" --drop="piste:grooming=backcountry"  raw_osm/${name}.osm > filtered_osm/${name}.osm
 
 name=london; /usr/bin/time ./scripts/osmfilter raw_osm/${name}.osm --keep= --keep-ways=building= --drop-relations -o=filtered_osm/${name}.osm
+name=london; /usr/bin/time ./scripts/osmfilter raw_osm/${name}.osm --keep= --keep="highway=" --drop-relations -o=filtered_osm/${name}.osm
 
 4. Add elevation:
 

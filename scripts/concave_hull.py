@@ -11,6 +11,7 @@ from shapely.ops import cascaded_union, polygonize
 from scipy.spatial import Delaunay
 import numpy as np
 import math
+import pyproj as pp
 
 def calculate_projected_polygon_area(polygon):
     '''
@@ -21,7 +22,8 @@ def calculate_projected_polygon_area(polygon):
     @return: The polygon's area.
     '''
     point = polygon.representative_point()
-    m = Basemap(width=1,height=1, resolution='l',projection='laea',lat_ts=point.x,lat_0=point.x,lon_0=point.y)
+    m = pp.Proj(proj='laea +lat_0={} +lon_0={}'.format(point.x, point.y))
+    #m = Basemap(width=1,height=1, resolution='l',projection='laea',lat_ts=point.x,lat_0=point.x,lon_0=point.y)
     coords = polygon.exterior.coords
     new_coords = []
     for (x1,y1) in coords:
