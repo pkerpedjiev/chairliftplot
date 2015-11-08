@@ -40,7 +40,11 @@ python scripts/combine_geojsons.py jsons/europe-latest.json jsons/north-america-
 
 ## Get Top N Jsons ##
 
-python scripts/filter_geojson.py -t 1 jsons/europe-latest.json
+name=europe-latest; python scripts/filter_geojson.py jsons/${name}.json -t 10 > top_n/${name}.json
+name=europe-latest; cp top_n/${name}.json ~/projects/emptypipes/minisites/2015-11-07-map-area-comparison/jsons/
+name=europe-latest; topojson -q 100000 -o jsons/${name}.topo boundaries=jsons/${name}.json > top_n/topo/${name}.topo
+name=europe-latest; topojson -q 100000 -o top_n/topo/${name}.topo boundaries=top_n/${name}.json
+name=europe-latest; cp top_n/topo/${name}.topo ~/projects/emptypipes/minisites/2015-11-07-map-area-comparison/jsons/topn.topo
 
 ## Cities ##
 
