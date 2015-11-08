@@ -38,6 +38,10 @@ Notes:
 
 python scripts/combine_geojsons.py jsons/europe-latest.json jsons/north-america-latest.json > jsons/europe-north-america.json
 
+## Get Top N Jsons ##
+
+python scripts/filter_geojson.py -t 1 jsons/europe-latest.json
+
 ## Cities ##
 
 name=vienna_small; python scripts/sample_osm_nodes.py filtered_osm/${name}.osm > sampled_osm/${name}.osm

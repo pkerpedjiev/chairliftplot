@@ -27,7 +27,7 @@ def calculate_projected_polygon_area(polygon):
     coords = polygon.exterior.coords
     new_coords = []
     for (x1,y1) in coords:
-        new_coords += [ m(y1,x1)]
+        new_coords += [ m(x1,y1)]
 
     new_polygon = Polygon(new_coords)
     return new_polygon.area
@@ -131,7 +131,7 @@ def main():
     points = np.genfromtxt(args[0], delimiter=' ')
 
     #print >>sys.stderr, "point:", points
-    points = [geometry.shape(Point(point[0], point[1]))
+    points = [geometry.shape(Point(point[1], point[0]))     #Add points as longitude latitude pairs
                       for point in points]
     concave_hull, edge_points = alpha_shape( points, distance=options.distance)
     features = []
