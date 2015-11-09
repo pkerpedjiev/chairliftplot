@@ -31,12 +31,14 @@ def main():
 
     counter = 0
     for event, elem in context:
-        if event == 'end' and elem.tag == 'node':
-            counter += 1
+        if event == 'end':
+            if elem.tag == 'node':
+                counter += 1
 
-            if counter % options.n == 0:
-                if 'lat' in elem.attrib and 'lon' in elem.attrib:
-                    print elem.attrib['lat'], elem.attrib['lon']
+                if counter % options.n == 0:
+                    if 'lat' in elem.attrib and 'lon' in elem.attrib:
+                        print elem.attrib['lat'], elem.attrib['lon']
+
             elem.clear()
             root.clear()
 

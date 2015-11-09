@@ -11,7 +11,7 @@ name=switzerland-latest; ./scripts/osmfilter --keep="piste:type=downhill or aeri
 name=whistler; ./scripts/osmfilter --keep="piste:type=downhill or aerialway=" --drop="piste:grooming=backcountry"  raw_osm/${name}.osm > filtered_osm/${name}.osm
 
 name=london; /usr/bin/time ./scripts/osmfilter raw_osm/${name}.osm --keep= --keep-ways=building= --drop-relations -o=filtered_osm/${name}.osm
-name=london; /usr/bin/time ./scripts/osmfilter raw_osm/${name}.osm --keep= --keep="highway=" --drop-relations -o=filtered_osm/${name}.osm
+name=london; /usr/bin/time ./scripts/osmfilter raw_osm/${name}.osm --keep= --keep="highway=" --drop-relations -o=filtered_osm/highways/${name}.osm
 
 4. Add elevation:
 
@@ -19,7 +19,8 @@ python scripts/augment_nodes.py filtered_osm/stuhleck.osm > with_elevation/stuhl
 
 * Sample subset of nodes
 
-name=vienna_small; python scripts/sample_osm_nodes.py filtered_osm/${name}.osm > sampled_osm/${name}.ssv
+name=vienna_small; python scripts/sample_osm_nodes.py -n 100 filtered_osm/${name}.osm > sampled_osm/${name}.ssv
+name=europe-latest; python scripts/sample_osm_nodes.py -n 100 filtered_osm/highways/${name}.osm > sampled_osm/highways/${name}.ssv
 
 * Cluster by distance:
 
