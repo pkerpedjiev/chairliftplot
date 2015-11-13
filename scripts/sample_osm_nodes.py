@@ -29,6 +29,8 @@ def main():
     # get the root element
     event, root = context.next()
 
+    lat_lons = {}
+
     counter = 0
     for event, elem in context:
         if event == 'end':
@@ -36,11 +38,20 @@ def main():
                 counter += 1
 
                 if counter % options.n == 0:
-                    if 'lat' in elem.attrib and 'lon' in elem.attrib:
+                    if 'lat' in elem.attrib and 'lon' in elem.attrib and 'id' in elem.attrib:
+                        lat_lons[elem.attrib['id']] = (float(elem.attrib['lat']), float(elem.attrib['lon']))
                         print elem.attrib['lat'], elem.attrib['lon']
-
-            elem.clear()
-            root.clear()
+            if elem.tag == 'way':
+                points = []
+                for nd in elem.findall('nd'):
+                    print >>sys.stderr, "nd.attrib", nd.attrib
+                    if 'ref' in nd.attrib:
+                        points += [lat_lons[nd.attrib['ref']]]
+                    nd.clear()
+                print >>sys.stderr, "points:", points
+            if elem.tag != 'nd':
+                elem.clear()
+                root.clear()
 
 if __name__ == '__main__':
     main()
