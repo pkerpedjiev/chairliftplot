@@ -41,9 +41,15 @@ python scripts/combine_geojsons.py jsons/europe-latest.json jsons/north-america-
 
 ## Get Top N Jsons ##
 
-name=europe-latest; python scripts/filter_geojson.py jsons/highways/${name}.json -t 10 > top_n/highways/${name}.json
-name=europe-latest; topojson -q 100000 -o top_n/topo/${name}.topo boundaries=top_n/${name}.json
-name=europe-latest; cp top_n/topo/${name}.topo ~/projects/emptypipes/minisites/2015-11-07-map-area-comparison/jsons/topn.topo
+type=ski_lifts;
+rm top_n/topo/${type}/all.topo
+for name in europe-latest north-america-latest asia-latest; do
+    python scripts/filter_geojson.py jsons/${type}/${name}.json -t 5 > top_n/${type}/${name}.json 
+done;
+name=all;
+python scripts/combine_geojsons.py top_n/${type}/europe-latest.json top_n/${type}/north-america-latest.json top_n/${type}/asia-latest.json > top_n/${type}/all.json
+topojson -q 100000 -o top_n/topo/${type}/${name}.topo boundaries=top_n/${type}/${name}.json -p
+cp top_n/topo/${type}/${name}.topo ~/projects/emptypipes/minisites/2015-11-07-map-area-comparison/jsons/topn.topo
 
 name=central-america-latest; python scripts/filter_geojson.py jsons/highways/${name}.json -t 10 > jsons/highways/${name}_topn.json
 ./scripts/finish.sh highways/central-america-latest_topn
