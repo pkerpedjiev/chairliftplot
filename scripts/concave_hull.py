@@ -1,6 +1,5 @@
 import json
 import uuid
-from mpl_toolkits.basemap import Basemap
 
 from shapely.ops import transform
 from haversine import haversine

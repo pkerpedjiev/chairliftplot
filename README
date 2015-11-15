@@ -48,7 +48,7 @@ name=europe-latest; cp top_n/topo/${name}.topo ~/projects/emptypipes/minisites/2
 name=central-america-latest; python scripts/filter_geojson.py jsons/highways/${name}.json -t 10 > jsons/highways/${name}_topn.json
 ./scripts/finish.sh highways/central-america-latest_topn
 
-name=spanish-town;
+name=europe-latest;
 /usr/bin/time ./scripts/osmfilter raw_osm/${name}.osm --keep="landuse=residential" --drop-relations -o=filtered_osm/residential/${name}.osm
 python scripts/sample_osm_nodes.py -n 1 filtered_osm/residential/${name}.osm > sampled_osm/residential/${name}.ssv
 python scripts/concave_hull.py sampled_osm/residential/${name}.ssv -d 0.5 > jsons/residential/${name}.json
@@ -58,3 +58,9 @@ python scripts/filter_geojson.py jsons/residential/${name}.json -t 1000 > jsons/
 ## Cities ##
 
 name=vienna_small; python scripts/sample_osm_nodes.py filtered_osm/${name}.osm > sampled_osm/${name}.osm
+
+
+## Setting up a pythonpath on archer ##
+
+export PATH=~/.virtualenvs/stuff/bin/:$PATH
+export PYTHONPATH=~/.virtualenvs/stuff/lib/python2.7/site-packages/

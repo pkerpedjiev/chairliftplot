@@ -1,5 +1,8 @@
 #!/usr/bin/python
 
+import itertools as it
+import numpy as np
+import shapely.geometry as sg
 import xml.etree.ElementTree as ET
 import sys
 from optparse import OptionParser
@@ -44,11 +47,27 @@ def main():
             if elem.tag == 'way':
                 points = []
                 for nd in elem.findall('nd'):
-                    print >>sys.stderr, "nd.attrib", nd.attrib
+                    #print >>sys.stderr, "nd.attrib", nd.attrib
                     if 'ref' in nd.attrib:
                         points += [lat_lons[nd.attrib['ref']]]
                     nd.clear()
-                print >>sys.stderr, "points:", points
+                #print >>sys.stderr, "points:", points
+
+
+                if len(points) < 3:
+                    continue
+
+                polygon = sg.Polygon(points)
+                bounds = polygon.bounds
+
+                xs = np.arange(bounds[0], bounds[2], 0.003)
+                ys = np.arange(bounds[1], bounds[3], 0.003)
+
+                for x,y in it.product(xs, ys):
+                    point = sg.Point(x,y)
+                    if point.within(polygon):
+                        print point.x, point.y
+
             if elem.tag != 'nd':
                 elem.clear()
                 root.clear()
