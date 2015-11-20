@@ -80,11 +80,12 @@ def alpha_shape(points, distance_function=haversine, distance=1):
         c = math.sqrt((pc[0]-pa[0])**2 + (pc[1]-pa[1])**2)
         '''
 
-        a = distance_function(pa, pb)
-        b = distance_function(pb, pc)
-        c = distance_function(pa, pc)
+        a = distance_function(pa[::-1], pb[::-1])
+        b = distance_function(pb[::-1], pc[::-1])
+        c = distance_function(pa[::-1], pc[::-1])
 
         if a > distance or b > distance or c > distance:
+            print >>sys.stderr, "a:", a, "b:", b, "c:", c
             continue
  
         """
@@ -99,6 +100,7 @@ def alpha_shape(points, distance_function=haversine, distance=1):
         #print circum_r
         if circum_r < 1.0/alpha:
         """
+
         add_edge(edges, edge_points, coords, ia, ib)
         add_edge(edges, edge_points, coords, ib, ic)
         add_edge(edges, edge_points, coords, ic, ia)

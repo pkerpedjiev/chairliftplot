@@ -46,9 +46,8 @@ rm top_n/topo/${type}/all.topo
 for name in europe-latest north-america-latest asia-latest; do
     python scripts/filter_geojson.py jsons/${type}/${name}.json -t 5 > top_n/${type}/${name}.json 
 done;
-name=all;
 python scripts/combine_geojsons.py top_n/${type}/europe-latest.json top_n/${type}/north-america-latest.json top_n/${type}/asia-latest.json > top_n/${type}/all.json
-topojson -q 100000 -o top_n/topo/${type}/${name}.topo boundaries=top_n/${type}/${name}.json -p
+topojson -q 100000 -o top_n/topo/${type}/all.topo boundaries=top_n/${type}/all.json -p
 cp top_n/topo/${type}/${name}.topo ~/projects/emptypipes/minisites/2015-11-07-map-area-comparison/jsons/topn.topo
 
 name=central-america-latest; python scripts/filter_geojson.py jsons/highways/${name}.json -t 10 > jsons/highways/${name}_topn.json
@@ -60,6 +59,14 @@ python scripts/sample_osm_nodes.py -n 1 filtered_osm/residential/${name}.osm > s
 python scripts/concave_hull.py sampled_osm/residential/${name}.ssv -d 0.5 > jsons/residential/${name}.json
 python scripts/filter_geojson.py jsons/residential/${name}.json -t 1000 > jsons/residential/${name}_topn.json
 ./scripts/finish.sh residential/${name}_topn
+
+type=ski_lifts;
+name=shergesh;
+./scripts/osmfilter --keep="piste:type=downhill or aerialway=" --drop="piste:grooming=backcountry"  raw_osm/${name}.osm > filtered_osm/${type}/${name}.osm
+python scripts/sample_osm_nodes.py -n 1 filtered_osm/${type}/${name}.osm > sampled_osm/${type}/${name}.ssv
+python scripts/concave_hull.py sampled_osm/${type}/${name}.ssv -d 1 > jsons/${type}/${name}.json
+python scripts/filter_geojson.py jsons/${type}/${name}.json -t 1000 > jsons/${type}/${name}_topn.json
+./scripts/finish.sh ${type}/${name}_topn
 
 ## Cities ##
 
