@@ -61,7 +61,7 @@ python scripts/filter_geojson.py jsons/residential/${name}.json -t 1000 > jsons/
 ./scripts/finish.sh residential/${name}_topn
 
 type=ski_lifts;
-name=shergesh;
+name=asia-latest;
 ./scripts/osmfilter --keep="piste:type=downhill or aerialway=" --drop="piste:grooming=backcountry"  raw_osm/${name}.osm > filtered_osm/${type}/${name}.osm
 python scripts/sample_osm_nodes.py -n 1 filtered_osm/${type}/${name}.osm > sampled_osm/${type}/${name}.ssv
 python scripts/concave_hull.py sampled_osm/${type}/${name}.ssv -d 1 > jsons/${type}/${name}.json
