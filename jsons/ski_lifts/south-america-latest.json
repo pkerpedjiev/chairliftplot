@@ -436,7 +436,9 @@
       "type": "Feature", 
       "properties": {
         "uid": "0e1dfd72-ff27-425a-951c-ab0b159b7095", 
-        "name": "", 
+        "name": "Valle Nevado", 
+        "country": "Chile",
+        "url": "www.vallenevado.com",
         "area": 16.89270712333764
       }
     }, 
@@ -675,7 +677,9 @@
       "type": "Feature", 
       "properties": {
         "uid": "b8268384-d645-412a-8c02-eda09db394e4", 
-        "name": "", 
+        "name": "Cerro Catedral", 
+        "url": "http://www.catedralaltapatagonia.com/",
+        "country": "Argentina",
         "area": 7.1774121488438345
       }
     }, 
@@ -886,7 +890,9 @@
       "type": "Feature", 
       "properties": {
         "uid": "27a2b795-8ac7-4af3-a79a-d6a594aaa2a3", 
-        "name": "", 
+        "name": "Termas de Chillán", 
+        "country": "Chile",
+        "url": "www.chileanski.com",
         "area": 4.214957084662408
       }
     }, 
@@ -1065,7 +1071,9 @@
       "type": "Feature", 
       "properties": {
         "uid": "6659b3eb-bdbf-4aca-b9f2-979e385a055d", 
-        "name": "", 
+        "name": "Cerro Castor", 
+        "country": "Argentina",
+        "url": "www.cerrocastor.com",
         "area": 3.711375884108639
       }
     }, 
@@ -1236,7 +1244,9 @@
       "type": "Feature", 
       "properties": {
         "uid": "787bd5ed-5e61-4b24-99e4-74d80356e271", 
-        "name": "", 
+        "name": "Chapelco", 
+        "country": "Argentina",
+        "url": "www.chapelco.com/",
         "area": 2.832400642645704
       }
     }, 

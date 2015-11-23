@@ -264,7 +264,9 @@
       "type": "Feature", 
       "properties": {
         "uid": "f607fab5-5b1b-4cb0-9464-cec409e88d81", 
-        "name": "", 
+        "name": "Perisher", 
+        "url": "www.perisher.com.au",
+        "country": "Australia",
         "area": 9.562066324444235
       }
     }, 
@@ -391,7 +393,9 @@
       "type": "Feature", 
       "properties": {
         "uid": "1280be96-e275-48b4-baa9-095c236190dd", 
-        "name": "", 
+        "name": "Mt. Buller", 
+        "url": "www.mtbuller.com.au",
+        "country": "Australia",
         "area": 4.483629505035411
       }
     }, 
@@ -482,7 +486,9 @@
       "type": "Feature", 
       "properties": {
         "uid": "60b51d9b-f5b7-4476-9ed0-0edb27271188", 
-        "name": "", 
+        "name": "Thredbo", 
+        "url": "https://www.thredbo.com.au/",
+        "country": "Australia",
         "area": 4.2311448397125755
       }
     }, 
@@ -633,7 +639,9 @@
       "type": "Feature", 
       "properties": {
         "uid": "c032c01e-02ae-4e19-8483-64992a7c3f91", 
-        "name": "", 
+        "name": "Broken River", 
+        "url": "http://silverstripe.brokenriver.co.nz/",
+        "country": "New Zealand",
         "area": 2.825066734703522
       }
     }, 
@@ -780,7 +788,9 @@
       "type": "Feature", 
       "properties": {
         "uid": "3a3dbe42-ff70-48dc-bc0b-497505a4f4e3", 
-        "name": "", 
+        "name": "Mt. Hotham", 
+        "url": "www.mthotham.com.au",
+        "country": "Australia",
         "area": 2.711368535925731
       }
     }, 
@@ -887,7 +897,8 @@
       "type": "Feature", 
       "properties": {
         "uid": "4536f446-d013-443f-b3ac-909ed92dda9c", 
-        "name": "", 
+        "name": "Iwikau", 
+        "country": "New Zealand",
         "area": 2.5180833184055205
       }
     }, 

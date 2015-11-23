@@ -32,9 +32,30 @@ def add_waypoints(way, nodes, distance):
         #print >>sys.stderr, "len(lats)", len(lats), len(lons)
         #print >>sys.stderr, "zip", zip(lats, lons)
 
+        for j in range(1, len(zip(lats, lons))):
+            dir_vec = np.array([lats[j], lons[j]]) - np.array([lats[j-1], lons[j-1]])
+            ortho_vec1 = np.array([-dir_vec[1], dir_vec[0]])
+            ortho_vec2 = np.array([dir_vec[1], -dir_vec[0]])
+
+            ortho_vec1 = 0.0003 * ortho_vec1 / np.linalg.norm(ortho_vec1)
+            ortho_vec2 = 0.0003 * ortho_vec2 / np.linalg.norm(ortho_vec2)
+
+            side1 = np.array([lats[j-1], lons[j-1]]) + ortho_vec1
+            side2 = np.array([lats[j-1], lons[j-1]]) + ortho_vec2
+
+            print lats[j-1], lons[j-1]
+            print side1[0], side1[1]
+            print side2[0], side2[1]
+
+        side1 = np.array([lats[j], lons[j]]) + ortho_vec1
+        side2 = np.array([lats[j], lons[j]]) + ortho_vec2
+        print lats[j], lons[j]
+        print side1[0], side1[1]
+        print side2[0], side2[1]
+            
         #print >>sys.stderr, "points:", zip(lats, lons)
-        for lat,lon in  zip(lats, lons):
-            print lat, lon
+        #for lat,lon in  zip(lats, lons):
+        #    print lat, lon
 
 def fill_land_area(elem, lat_lons):
     '''

@@ -945,7 +945,8 @@
       "properties": {
         "area": 34.541632894869956, 
         "uid": "93f715be-b559-4ca1-94fb-c63c4eef0df6", 
-        "name": "Whistler / Blackcomb"
+        "name": "Whistler / Blackcomb",
+        "country": "Canada"
       }
     }, 
     {
@@ -1672,7 +1673,8 @@
       "properties": {
         "area": 31.37584002072742, 
         "uid": "f8dffc30-58e4-48cf-afd2-6c1854a7b950", 
-        "name": "Vail"
+        "name": "Vail",
+        "country": "USA"
       }
     }, 
     {
@@ -2283,7 +2285,8 @@
       "properties": {
         "area": 24.7881129242972, 
         "uid": "1f9ccda9-a40c-4da9-98d5-67b0bb78605b", 
-        "name": "Big Sky"
+        "name": "Big Sky",
+        "country": "USA"
       }
     }, 
     {
@@ -3042,7 +3045,8 @@
       "properties": {
         "area": 23.43539694983451, 
         "uid": "aabc7bbd-4a1b-46e8-b63c-3140ecac8245", 
-        "name": "Park City"
+        "name": "Park City",
+        "country": "USA"
       }
     }, 
     {
@@ -3585,7 +3589,8 @@
       "properties": {
         "area": 17.868944151585314, 
         "uid": "e8b25bb3-f6b7-4a1f-bbff-8accf247969f", 
-        "name": "The Canyons"
+        "name": "The Canyons",
+        "country": "USA"
       }
     }, 
     {

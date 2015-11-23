@@ -744,7 +744,8 @@
       "type": "Feature", 
       "properties": {
         "uid": "df4a854b-e779-4cc1-a9d7-9b42e1f3faa5", 
-        "name": "", 
+        "name": "Krasnaya Polyana", 
+        "country": "Russia",
         "area": 38.318253941441924
       }
     }, 
@@ -1395,7 +1396,8 @@
       "type": "Feature", 
       "properties": {
         "uid": "706865d0-049d-4f70-8c3f-af11d81cd0d1", 
-        "name": "", 
+        "name": "Alts Bandai", 
+        "country": "Japan",
         "area": 9.544487649980928
       }
     }, 
@@ -1602,7 +1604,8 @@
       "type": "Feature", 
       "properties": {
         "uid": "0e83e312-0461-4b35-8aea-6a570b4c2caf", 
-        "name": "", 
+        "name": "Shiga Kogen", 
+        "country": "Japan",
         "area": 8.40699546512942
       }
     }, 
@@ -2001,7 +2004,8 @@
       "type": "Feature", 
       "properties": {
         "uid": "c8dd66ea-e34d-4a2d-acd9-01ca4586e4d7", 
-        "name": "", 
+        "name": "Sheregesh", 
+        "country": "Russia",
         "area": 8.357228525297309
       }
     }, 
@@ -2128,7 +2132,8 @@
       "type": "Feature", 
       "properties": {
         "uid": "469e9977-70e7-4e8e-979e-8db7cc6449a6", 
-        "name": "", 
+        "name": "Zao Onsen", 
+        "country": "Japan",
         "area": 7.974905231465013
       }
     }, 
