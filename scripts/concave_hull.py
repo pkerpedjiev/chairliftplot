@@ -6,7 +6,7 @@ from haversine import haversine
 import shapely.geometry as geometry
 from shapely.geometry import Point, Polygon, MultiPolygon
 from shapely.geometry import mapping
-from shapely.ops import cascaded_union, polygonize
+from shapely.ops import cascaded_union, polygonize, unary_union
 from scipy.spatial import Delaunay
 import numpy as np
 import math
@@ -68,6 +68,8 @@ def alpha_shape(points, distance_function=haversine, distance=1):
     # loop over triangles:
     # ia, ib, ic = indices of corner points of the
     # triangle
+    polygons = []
+
     for ia, ib, ic in tri.vertices:
         pa = coords[ia]
         pb = coords[ib]
@@ -85,7 +87,6 @@ def alpha_shape(points, distance_function=haversine, distance=1):
         c = distance_function(pa[::-1], pc[::-1])
 
         if a > distance or b > distance or c > distance:
-            print >>sys.stderr, "a:", a, "b:", b, "c:", c
             continue
  
         """
@@ -104,10 +105,28 @@ def alpha_shape(points, distance_function=haversine, distance=1):
         add_edge(edges, edge_points, coords, ia, ib)
         add_edge(edges, edge_points, coords, ib, ic)
         add_edge(edges, edge_points, coords, ic, ia)
+
+        #print >>sys.stderr, "ia:", ia
+        rounded = 6
+        polygons += [Polygon([np.round(coords[ia], rounded), 
+                              np.round(coords[ib], rounded), 
+                              np.round(coords[ic], rounded)])]
+
+        '''
+        epsilon = 0.0000001
+        if np.allclose(coords[ia], coords[ib], epsilon):
+            print >>sys.stderr, "close:", ia, ib, coords[ia], coords[ib]
+        if np.allclose(coords[ia], coords[ic], epsilon):
+            print >>sys.stderr, "close:", ia, ic, coords[ib], coords[ic]
+        if np.allclose(coords[ib], coords[ic], epsilon):
+            print >>sys.stderr, "close:", ib, ic, coords[ia], coords[ic]
+        '''
  
-    m = geometry.MultiLineString(edge_points)
-    triangles = list(polygonize(m))
-    return cascaded_union(triangles), edge_points
+    #print >>sys.stderr, "polygons:", polygons
+    #m = geometry.MultiLineString(edge_points)
+    #triangles = list(polygonize(m))
+    #print >>sys.stderr, "len:", len(polygons), polygons[54405], polygons[54406]
+    return cascaded_union(polygons), edge_points
 
 import sys
 from optparse import OptionParser

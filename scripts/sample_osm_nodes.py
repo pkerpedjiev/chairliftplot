@@ -37,21 +37,30 @@ def add_waypoints(way, nodes, distance):
             ortho_vec1 = np.array([-dir_vec[1], dir_vec[0]])
             ortho_vec2 = np.array([dir_vec[1], -dir_vec[0]])
 
-            ortho_vec1 = 0.0003 * ortho_vec1 / np.linalg.norm(ortho_vec1)
-            ortho_vec2 = 0.0003 * ortho_vec2 / np.linalg.norm(ortho_vec2)
+            norm1 = np.linalg.norm(ortho_vec1)
+            norm2 = np.linalg.norm(ortho_vec2)
+
+            print lats[j-1], lons[j-1]
+
+            epsilon = 0.00000001
+            if norm1 < epsilon or norm2 < epsilon:
+                print >>sys.stderr, "TOO SHORT:", norm1, norm2
+                continue
+
+            ortho_vec1 = 0.0003 * ortho_vec1 / norm1
+            ortho_vec2 = 0.0003 * ortho_vec2 / norm2
 
             side1 = np.array([lats[j-1], lons[j-1]]) + ortho_vec1
             side2 = np.array([lats[j-1], lons[j-1]]) + ortho_vec2
 
-            print lats[j-1], lons[j-1]
             print side1[0], side1[1]
             print side2[0], side2[1]
 
         side1 = np.array([lats[j], lons[j]]) + ortho_vec1
         side2 = np.array([lats[j], lons[j]]) + ortho_vec2
         print lats[j], lons[j]
-        print side1[0], side1[1]
-        print side2[0], side2[1]
+        #print side1[0], side1[1]
+        #print side2[0], side2[1]
             
         #print >>sys.stderr, "points:", zip(lats, lons)
         #for lat,lon in  zip(lats, lons):
