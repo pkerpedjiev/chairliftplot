@@ -107,10 +107,12 @@ def alpha_shape(points, distance_function=haversine, distance=1):
         add_edge(edges, edge_points, coords, ic, ia)
 
         #print >>sys.stderr, "ia:", ia
-        rounded = 6
-        polygons += [Polygon([np.round(coords[ia], rounded), 
-                              np.round(coords[ib], rounded), 
-                              np.round(coords[ic], rounded)])]
+        rounded = 7
+        poly = Polygon([coords[ia], coords[ib], coords[ic]])
+        if not poly.is_valid:
+            print >>sys.stderr, "not valid:", poly
+        else:
+            polygons += [poly]
 
         '''
         epsilon = 0.0000001
@@ -122,6 +124,7 @@ def alpha_shape(points, distance_function=haversine, distance=1):
             print >>sys.stderr, "close:", ib, ic, coords[ia], coords[ic]
         '''
  
+    #print "sum", sum([p.is_valid for p in polygons])
     #print >>sys.stderr, "polygons:", polygons
     #m = geometry.MultiLineString(edge_points)
     #triangles = list(polygonize(m))
