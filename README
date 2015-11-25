@@ -51,13 +51,15 @@ topojson -q 100000 -o top_n/topo/${type}/all.topo boundaries=top_n/${type}/all.j
 cp top_n/topo/${type}/all.topo ~/projects/emptypipes/minisites/2015-11-07-map-area-comparison/jsons/topn.topo
 
 
-./scripts/osmfilter --keep="piste:type=downhill or aerialway=" --drop="piste:grooming=backcountry"  raw_osm/${name}.osm > filtered_osm/${type}/${name}.osm
+./scripts/osmfilter --keep="piste:type=downhill or aerialway=" --drop="piste:grooming=backcountry" --drop="@id=42690956" raw_osm/${name}.osm > filtered_osm/${type}/${name}.osm
+./scripts/osmfilter --drop="@id=42690956"  filtered_osm/${type}/${name}.osm > filtered_osm1/${type}/${name}.osm
 
 type=ski_lifts;
-name=europe-latest;
 distance=0.8;
 python scripts/sample_osm_nodes.py -n 1 -d ${distance} filtered_osm/${type}/${name}.osm > sampled_osm/${type}/${name}.ssv
 python scripts/concave_hull.py sampled_osm/${type}/${name}.ssv -d ${distance} > jsons/${type}/${name}.json
+
+name=europe-latest;
 python scripts/filter_geojson.py jsons/${type}/${name}.json -t 1000 > jsons/${type}/${name}_topn.json
 ./scripts/finish.sh ${type}/${name}_topn
 
