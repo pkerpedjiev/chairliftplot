@@ -51,7 +51,7 @@ topojson -q 100000 -o top_n/topo/${type}/all.topo boundaries=top_n/${type}/all.j
 cp top_n/topo/${type}/all.topo ~/projects/emptypipes/minisites/2015-11-07-map-area-comparison/jsons/topn.topo
 
 
-./scripts/osmfilter --keep="piste:type=downhill or aerialway=" --drop="piste:grooming=backcountry" --drop="@id=42690956" raw_osm/${name}.osm > filtered_osm/${type}/${name}.osm
+./scripts/osmfilter --keep="piste:type=downhill or aerialway=" --drop="piste:grooming=backcountry" --drop"@id=51995617" --drop="@id=42690956" raw_osm/${name}.osm > filtered_osm/${type}/${name}.osm
 
 type=ski_lifts;
 name=europe-latest;
