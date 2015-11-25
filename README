@@ -52,9 +52,9 @@ cp top_n/topo/${type}/all.topo ~/projects/emptypipes/minisites/2015-11-07-map-ar
 
 
 ./scripts/osmfilter --keep="piste:type=downhill or aerialway=" --drop="piste:grooming=backcountry" --drop="@id=42690956" raw_osm/${name}.osm > filtered_osm/${type}/${name}.osm
-./scripts/osmfilter --drop="@id=42690956"  filtered_osm/${type}/${name}.osm > filtered_osm1/${type}/${name}.osm
 
 type=ski_lifts;
+name=europe-latest;
 distance=0.8;
 python scripts/sample_osm_nodes.py -n 1 -d ${distance} filtered_osm/${type}/${name}.osm > sampled_osm/${type}/${name}.ssv
 python scripts/concave_hull.py sampled_osm/${type}/${name}.ssv -d ${distance} > jsons/${type}/${name}.json
