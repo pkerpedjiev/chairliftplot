@@ -44,14 +44,14 @@ def add_waypoints(way, nodes, distance):
             side2 = np.array([lats[j-1], lons[j-1]]) + ortho_vec2
 
             print lats[j-1], lons[j-1]
-            print side1[0], side1[1]
-            print side2[0], side2[1]
+            #print side1[0], side1[1]
+            #print side2[0], side2[1]
 
         side1 = np.array([lats[j], lons[j]]) + ortho_vec1
         side2 = np.array([lats[j], lons[j]]) + ortho_vec2
         print lats[j], lons[j]
-        print side1[0], side1[1]
-        print side2[0], side2[1]
+        #print side1[0], side1[1]
+        #print side2[0], side2[1]
             
         #print >>sys.stderr, "points:", zip(lats, lons)
         #for lat,lon in  zip(lats, lons):
