@@ -54,7 +54,7 @@ cp top_n/topo/${type}/all.topo ~/projects/emptypipes/minisites/2015-11-07-map-ar
 ./scripts/osmfilter --keep="piste:type=downhill or aerialway=" --drop="piste:grooming=backcountry"  raw_osm/${name}.osm > filtered_osm/${type}/${name}.osm
 
 type=ski_lifts;
-name=australia-oceania-latest;
+name=europe-latest;
 distance=0.8;
 python scripts/sample_osm_nodes.py -n 1 -d ${distance} filtered_osm/${type}/${name}.osm > sampled_osm/${type}/${name}.ssv
 python scripts/concave_hull.py sampled_osm/${type}/${name}.ssv -d ${distance} > jsons/${type}/${name}.json
@@ -78,3 +78,9 @@ python scripts/filter_geojson.py jsons/residential/${name}.json -t 1000 > jsons/
 
 export PATH=~/.virtualenvs/stuff/bin/:$PATH
 export PYTHONPATH=~/.virtualenvs/stuff/lib/python2.7/site-packages/
+
+## Extraneous Ways ##
+
+There is a piste that links the cinque torre ski area with the sella ronda ski area.
+It appears to just be a backcountry piste so it shouldn't count toward the map. If
+I'd like to exclude it, the way number is 42690956
