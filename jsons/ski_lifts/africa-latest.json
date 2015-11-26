@@ -59,7 +59,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "1f08b7d3-0b18-4c16-a20a-174a9ae0beeb", 
+        "uid": "7c7b8198-525c-401e-a251-bf9a617c436c", 
         "name": "", 
         "area": 1.1234923716317124
       }
@@ -150,7 +150,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "8d65784b-9e9a-42d7-ba23-b2f3077b152f", 
+        "uid": "75dc368d-f5de-4da8-8184-61dc0af19d41", 
         "name": "", 
         "area": 0.6918878898750692
       }
@@ -205,8 +205,9 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "28497dab-874f-4009-b901-dac1fa6a5f33", 
-        "name": "", 
+        "uid": "bda50dee-ce93-4ac9-95fe-e7f7de464a15", 
+        "name": "Oukaimeden", 
+        "country": "Morocco",
         "area": 0.5706374045999371
       }
     }, 
@@ -284,7 +285,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "73c93d27-2127-4f39-9682-44c826c40359", 
+        "uid": "fdee6937-5135-4264-8021-806a45ed7b81", 
         "name": "", 
         "area": 0.4511225128505077
       }
@@ -351,8 +352,9 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "7b09a7d7-bfa5-4fa5-9697-7e71332091a1", 
-        "name": "", 
+        "uid": "77b10c77-219e-4eb6-8f0d-7bf698c7589d", 
+        "name": "Chréa", 
+        "country": "Algeria",
         "area": 0.4109416990840164
       }
     }, 
@@ -406,7 +408,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "0a693866-9b9f-4702-a602-f55ff7c7c1a1", 
+        "uid": "14266e67-2646-4bda-bd62-910ae26b6e18", 
         "name": "", 
         "area": 0.37840877658228217
       }
@@ -489,7 +491,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "5af6592c-22e5-4e51-a670-8c481fec5114", 
+        "uid": "b89cdf7d-56d5-49bc-9156-d71bbc843541", 
         "name": "", 
         "area": 0.3549694627763246
       }
@@ -556,7 +558,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "c025bc01-2e64-41af-a0ed-208fc977d869", 
+        "uid": "75270eb5-9c38-4bbe-ab13-f61b6b4cd87c", 
         "name": "", 
         "area": 0.15816536290059696
       }
@@ -615,7 +617,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "aaba473b-2354-48d4-89ae-985969065c05", 
+        "uid": "8835385d-543f-4276-b64d-7884c86808c0", 
         "name": "", 
         "area": 0.13543900935666045
       }
@@ -674,7 +676,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "0c3ec14b-bedc-43db-a6ed-6193872c72a7", 
+        "uid": "649b6222-d209-4119-8d5d-3b4299b1b9b4", 
         "name": "", 
         "area": 0.13376948317249468
       }
@@ -709,7 +711,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "68b06446-972d-4c7f-b80f-1f588cd2f546", 
+        "uid": "e7713460-0bb0-46a0-b438-42c6bc9b1c19", 
         "name": "", 
         "area": 0.12457568449949337
       }
@@ -780,7 +782,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "976fed7a-03b8-4cd8-922e-34cb99f5cffc", 
+        "uid": "b3c412c6-3358-40c7-a4dd-bf9258e882b1", 
         "name": "", 
         "area": 0.08025110027366059
       }
@@ -811,7 +813,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "bf92fc06-48df-476c-93ef-06bb7477177d", 
+        "uid": "a78e16f4-e171-47e0-9cb0-1fabbde5dfe7", 
         "name": "", 
         "area": 0.0605370863679339
       }
@@ -842,7 +844,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "894b91c0-2635-4856-9d57-c5da1ddbaf79", 
+        "uid": "535e1988-ee25-4003-a393-2d320e4dd774", 
         "name": "", 
         "area": 0.05406440593442312
       }
@@ -877,8 +879,9 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "055f9aec-3284-430a-85ea-bba5b664814e", 
-        "name": "", 
+        "uid": "2e66f45f-ec55-40bb-b898-28acfa68817a", 
+        "name": "Tiffindell", 
+        "country", "South Africa",
         "area": 0.05108550638704658
       }
     }, 
@@ -916,7 +919,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "c1c7c4fb-8792-438f-99e2-fe1471ab0795", 
+        "uid": "d837a0f8-950d-4c36-a200-288e7d23db79", 
         "name": "", 
         "area": 0.04398315619986433
       }
@@ -959,7 +962,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "1dda83c3-bc8e-4ab5-886b-13369cf36945", 
+        "uid": "34c53e71-b2b4-4556-a565-61081ac5f5cb", 
         "name": "", 
         "area": 0.03434613763250838
       }
@@ -990,7 +993,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "32211847-a7fb-4c08-bc8c-4fa2685f6990", 
+        "uid": "b8191ca9-6866-4e03-aed7-53ef6f7b339f", 
         "name": "", 
         "area": 0.028590818485429235
       }
@@ -1069,8 +1072,9 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "d3365eeb-7f8c-4c37-8ef8-932b0d00b67b", 
-        "name": "", 
+        "uid": "c013d473-c10b-42c7-b241-91befed91061", 
+        "name": "Afriski", 
+        "country": "Lesthos",
         "area": 0.026254836830104163
       }
     }, 
@@ -1136,7 +1140,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "5657861c-816a-4213-bf75-3bf32cb88d52", 
+        "uid": "3c8d3a38-26d6-4a38-b02c-3d21e8d6ebe1", 
         "name": "", 
         "area": 0.024328706976118372
       }
@@ -1215,7 +1219,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "8dca9ea0-b8a0-4e3c-b9b6-461e3d734c68", 
+        "uid": "6e14c815-e9f8-4356-86f6-a1bfe1c80af2", 
         "name": "", 
         "area": 0.021086292207633913
       }
@@ -1254,7 +1258,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "61f08703-69d5-4d01-8bbb-6fc9e3e8928a", 
+        "uid": "c1b6c53b-ba39-4039-ba2a-8614c164b179", 
         "name": "", 
         "area": 0.018602281346894785
       }
@@ -1289,7 +1293,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "994b5b6f-0c3e-43ea-8604-7db7a91e642a", 
+        "uid": "0e1a910d-f7d9-4aad-bccf-2be3c889d159", 
         "name": "", 
         "area": 0.01757357048724353
       }
@@ -1340,7 +1344,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "4332a496-0c9c-4ddf-a8d7-6b8ebf5033f6", 
+        "uid": "32c24681-45c6-46ee-b305-cd4c45ec21ce", 
         "name": "", 
         "area": 0.011949718302147236
       }
@@ -1371,7 +1375,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "5ee6ef9c-8603-418b-9652-bfba524139d1", 
+        "uid": "47754f4d-915e-4e90-8227-8aa46b6e0d68", 
         "name": "", 
         "area": 0.011258205338567393
       }
@@ -1402,7 +1406,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "162e27a7-b9a9-42f3-a7c2-f8ded6e8d61e", 
+        "uid": "2c2b69da-88f4-4125-a1a7-a5da907b5437", 
         "name": "", 
         "area": 0.010916098167364718
       }
@@ -1469,7 +1473,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "c685530f-db1e-453e-b82a-520571644f0c", 
+        "uid": "05527051-e8b7-42ab-a614-d459d87b9b6e", 
         "name": "", 
         "area": 0.010641163020892677
       }
@@ -1544,7 +1548,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "32601657-21a2-420d-9a0f-9173502cddcb", 
+        "uid": "3c34255a-b7bd-4486-8026-b8e8bca7a7b7", 
         "name": "", 
         "area": 0.009791867256417064
       }
@@ -1575,7 +1579,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "4cbcd436-5395-4d2a-acc0-15adf207e877", 
+        "uid": "e90a4fe6-0960-477a-afcc-d20c5ced3423", 
         "name": "", 
         "area": 0.00735512244025871
       }
@@ -1662,7 +1666,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "b27fe1c0-f37a-40f2-8571-d03ecc2f3443", 
+        "uid": "69acf0f7-7e46-41aa-87d3-92b87f65ce82", 
         "name": "", 
         "area": 0.007184239808024184
       }
@@ -1701,7 +1705,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "b279c2b8-e927-40a6-991a-dab6753baec9", 
+        "uid": "8a32cc58-f7ef-43a9-a633-a36909f31add", 
         "name": "", 
         "area": 0.0071841597791548195
       }
@@ -1744,7 +1748,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "6114d190-0419-4805-9622-22ccd021b381", 
+        "uid": "bd539cde-33d2-4659-833e-86a74ff802a4", 
         "name": "", 
         "area": 0.006575949842301248
       }
@@ -1795,7 +1799,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "efb6a947-87d2-4446-9910-9c6ea26c2c3e", 
+        "uid": "48eb3260-858a-4c71-9235-4fa9d3c1aca5", 
         "name": "", 
         "area": 0.00497054640425209
       }
@@ -1830,7 +1834,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "f3b3c8df-5908-4157-8b43-548190744e3d", 
+        "uid": "06077d61-7e2f-4c37-82c7-e4e2c87829b4", 
         "name": "", 
         "area": 0.004105330227743984
       }
@@ -1897,7 +1901,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "8db71c63-bd4e-4d56-9628-79c5f3bba92b", 
+        "uid": "263bd9e0-ec74-4d4f-9df3-4ff53d17e690", 
         "name": "", 
         "area": 0.0036070601213767624
       }
@@ -1932,7 +1936,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "ecd4310d-83cd-43b3-a561-ea318874701f", 
+        "uid": "4abc17ba-93d8-41f3-8406-092ccb9af1f7", 
         "name": "", 
         "area": 0.0032141295526125595
       }
@@ -1983,7 +1987,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "a370c8b5-865a-41be-a5ef-d0dd088a8f15", 
+        "uid": "5613f3bf-884b-4297-b3ed-d89ae5b367ea", 
         "name": "", 
         "area": 0.0029416235465759217
       }
@@ -2062,7 +2066,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "389c6487-6f28-4f35-b6e3-fd709a501bb4", 
+        "uid": "174d89a4-7334-4dca-9427-0f84d92f43f6", 
         "name": "", 
         "area": 0.0024586539986227894
       }
@@ -2133,7 +2137,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "2efe61f4-1b7d-4f4e-be47-ae1582887bfd", 
+        "uid": "f903fe37-ec13-41af-af42-039b5121d6c4", 
         "name": "", 
         "area": 0.002358920408242024
       }
@@ -2204,7 +2208,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "51bd3d60-f247-45eb-8d12-3316c0df8ddf", 
+        "uid": "478b3d6d-81ba-42f1-8d7f-22537c8863c7", 
         "name": "", 
         "area": 0.0023316795522692734
       }
@@ -2235,7 +2239,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "72cb1526-b9b5-4515-a934-8aef82e0f0e7", 
+        "uid": "13e565cc-bc5c-4d72-842e-539909872a8a", 
         "name": "", 
         "area": 0.0019234913671707763
       }
@@ -2274,7 +2278,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "00c3e4da-dadc-45a7-93b5-5b6b9ae9e9a1", 
+        "uid": "74c4148f-1c01-4fbd-9956-2866f785505a", 
         "name": "", 
         "area": 0.0018111176275708968
       }
@@ -2305,7 +2309,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "e1954109-efdb-41f5-8cb0-06d312d64b34", 
+        "uid": "e87bf8ac-2e6c-4b4a-a5e6-a672a6c97544", 
         "name": "", 
         "area": 0.0010528862786151538
       }
@@ -2352,7 +2356,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "de521105-82fa-42d0-a039-11e160452f26", 
+        "uid": "62961997-8309-4d50-97d7-d63a2c9a4dfe", 
         "name": "", 
         "area": 0.0009446093810068934
       }
@@ -2383,7 +2387,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "28b0992e-082f-4a8c-8ee2-f1806f8a7d8d", 
+        "uid": "f0154f0f-4a38-433c-a40e-d02f92179322", 
         "name": "", 
         "area": 0.0007816315490704437
       }
@@ -2414,7 +2418,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "979b9485-251c-48ec-9e94-effc28b9fe3a", 
+        "uid": "09c83527-08bd-4ea9-9b9e-84a55f157f1b", 
         "name": "", 
         "area": 0.0007590765210015234
       }
@@ -2449,7 +2453,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "700a940b-735c-45bb-9fc0-1ea009047f12", 
+        "uid": "e8d32ed7-8e2c-437b-a5b7-4b1beaf7553e", 
         "name": "", 
         "area": 0.0006364111250346145
       }
@@ -2480,7 +2484,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "0bb780b0-53e6-409a-b948-62fbef102316", 
+        "uid": "d09b8ddc-697e-4a65-bf48-5cceb20d60fb", 
         "name": "", 
         "area": 0.000508813866577686
       }
@@ -2523,7 +2527,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "06b3250a-6f31-4bad-b857-399d31c45b04", 
+        "uid": "0680a577-518b-44f4-98be-db2e2f79ec91", 
         "name": "", 
         "area": 0.00039119670053644744
       }
@@ -2558,7 +2562,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "5c292ed6-844d-423e-b0b1-c8166f111a81", 
+        "uid": "350d1ead-6666-47e7-b004-0504d49b7112", 
         "name": "", 
         "area": 0.000283696217913822
       }
@@ -2589,7 +2593,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "0126679f-19ac-4b05-bcf4-25fe1e4a2a0c", 
+        "uid": "1ea9e0c7-b474-4bf4-b24f-ac76a26cd613", 
         "name": "", 
         "area": 0.00024276274789471062
       }
@@ -2624,7 +2628,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "9e5f0f6a-ecbf-4cca-bac5-3efa8c70d4aa", 
+        "uid": "0db34e37-9840-47e9-8940-e9c9f7df2bd7", 
         "name": "", 
         "area": 0.00020842112516937777
       }
@@ -2655,7 +2659,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "001b5ee0-05cb-4c71-a48b-4c452e02928c", 
+        "uid": "dd3696a7-2130-4027-90ce-374c2ac25558", 
         "name": "", 
         "area": 0.00020464909728098245
       }
@@ -2690,7 +2694,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "83c7d5c5-f359-4ea4-9dcf-071aac1f429a", 
+        "uid": "fd4eb28a-0198-457f-a2c8-e835302ce3dd", 
         "name": "", 
         "area": 0.00014356766937167356
       }
@@ -2721,7 +2725,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "2f73e064-1a95-4155-ac59-4d97f71d6436", 
+        "uid": "c2522db6-d977-49d4-a385-80328f39a8c7", 
         "name": "", 
         "area": 0.00011213532011947246
       }
@@ -2752,7 +2756,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "157903f9-dbf0-43b7-acbc-fd590c274ead", 
+        "uid": "726c3f2b-1928-42e2-acf8-c76bb3e168fb", 
         "name": "", 
         "area": 0.0001004176610702998
       }
@@ -2783,7 +2787,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "33406ef1-f7f3-4f50-b605-2accd254cb9a", 
+        "uid": "649e2e40-a029-48b7-887b-c4af2bb6523b", 
         "name": "", 
         "area": 9.17497040455811e-05
       }
@@ -2818,7 +2822,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "6793a4fa-36fc-494e-a480-5af8b058b2de", 
+        "uid": "8327a416-1293-4b97-8b9d-c86808483a71", 
         "name": "", 
         "area": 5.976709457931764e-05
       }
@@ -2857,7 +2861,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "a70ee7a8-f04a-4e2c-8026-1405f672a33c", 
+        "uid": "2c82ecbb-8d41-41b7-9439-2bc28cdaccbc", 
         "name": "", 
         "area": 4.928101259987085e-05
       }
@@ -2892,7 +2896,7 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "uid": "ce09160b-b33d-4bea-94a8-9608148cc7a8", 
+        "uid": "e448fed9-bb96-46cc-a7a6-c0c2d9dbb3ee", 
         "name": "", 
         "area": 1.123248537862736e-06
       }
