@@ -44,7 +44,7 @@ python scripts/combine_geojsons.py jsons/europe-latest.json jsons/north-america-
 type=ski_lifts;
 rm top_n/topo/${type}/all.topo
 for name in europe-latest north-america-latest asia-latest south-america-latest australia-oceania-latest; do
-    python scripts/filter_geojson.py jsons/${type}/${name}.json -t 5 > top_n/${type}/${name}.json 
+    python scripts/filter_geojson.py jsons/${type}/${name}.json -t 5 -n > top_n/${type}/${name}.json 
 done;
 python scripts/combine_geojsons.py top_n/${type}/europe-latest.json top_n/${type}/north-america-latest.json top_n/${type}/asia-latest.json top_n/${type}/south-america-latest.json top_n/${type}/australia-oceania-latest.json > top_n/${type}/all.json
 topojson -q 100000 -o top_n/topo/${type}/all.topo boundaries=top_n/${type}/all.json -p
@@ -56,6 +56,9 @@ name=africa-latest;
 ./scripts/osmfilter --keep="piste:type=downhill or aerialway=" --drop="piste:grooming=backcountry"  raw_osm/${name}.osm > filtered_osm/${type}/${name}.osm
 python scripts/sample_osm_nodes.py -n 1 filtered_osm/${type}/${name}.osm > sampled_osm/${type}/${name}.ssv
 python scripts/concave_hull.py sampled_osm/${type}/${name}.ssv -d 1 > jsons/${type}/${name}.json
+
+type=ski_lifts;
+name=africa-latest;
 python scripts/filter_geojson.py jsons/${type}/${name}.json -t 1000 > jsons/${type}/${name}_topn.json
 ./scripts/finish.sh ${type}/${name}_topn
 
