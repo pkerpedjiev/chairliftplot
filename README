@@ -43,12 +43,13 @@ python scripts/combine_geojsons.py jsons/europe-latest.json jsons/north-america-
 
 type=ski_lifts;
 rm top_n/topo/${type}/all.topo
-for name in europe-latest north-america-latest asia-latest south-america-latest australia-oceania-latest; do
+for name in europe-latest north-america-latest asia-latest south-america-latest australia-oceania-latest africa-latest; do
     python scripts/filter_geojson.py jsons/${type}/${name}.json -t 5 -n > top_n/${type}/${name}.json 
 done;
-python scripts/combine_geojsons.py top_n/${type}/europe-latest.json top_n/${type}/north-america-latest.json top_n/${type}/asia-latest.json top_n/${type}/south-america-latest.json top_n/${type}/australia-oceania-latest.json > top_n/${type}/all.json
+python scripts/combine_geojsons.py top_n/${type}/europe-latest.json top_n/${type}/north-america-latest.json top_n/${type}/asia-latest.json top_n/${type}/south-america-latest.json top_n/${type}/australia-oceania-latest.json top_n/${type}/africa-latest.json > top_n/${type}/all.json
 topojson -q 100000 -o top_n/topo/${type}/all.topo boundaries=top_n/${type}/all.json -p
-cp top_n/topo/${type}/all.topo ~/projects/emptypipes/minisites/2015-11-07-map-area-comparison/jsons/topn.topo
+#cp top_n/topo/${type}/all.topo ~/projects/emptypipes/minisites/2015-11-07-map-area-comparison/jsons/topn.topo
+cp top_n/topo/${type}/all.topo ~/projects/emptypipes/jsons/largest-ski-areas/topn.topo
 
 
 type=ski_lifts;
