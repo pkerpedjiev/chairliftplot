@@ -60,8 +60,8 @@ python scripts/sample_osm_nodes.py -n 1 -d ${distance} filtered_osm/${type}/${na
 python scripts/concave_hull.py sampled_osm/${type}/${name}.ssv -d ${distance} > jsons/${type}/${name}.json
 
 type=ski_lifts;
-name=europe-latest;
-python scripts/filter_geojson.py jsons/${type}/${name}.json -t 1000 > jsons/${type}/${name}_topn.json
+name=australia-oceania-latest;
+python scripts/filter_geojson.py jsons/${type}/${name}.json -t 10000 > jsons/${type}/${name}_topn.json
 ./scripts/finish.sh ${type}/${name}_topn
 
 ## Cities ##
